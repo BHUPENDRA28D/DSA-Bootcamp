@@ -17,5 +17,5 @@ int factorial(int num){
         fact= fact*i;
     }
     return fact;
-    return fact;
+    
 }

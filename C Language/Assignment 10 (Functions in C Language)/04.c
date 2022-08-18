@@ -13,6 +13,6 @@ int main(){
 
 int naturalNumber(int n){
     for(int i=1;i<=n; i++){
-        printf("%d ",i);
+        printf("%d\n",i);
     }
 }
