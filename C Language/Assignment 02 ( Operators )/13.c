@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main()
-{
+{// its only for 3 digit number..
     int a = 874, r, q;
     r = a % 10;
     q = a / 10;
