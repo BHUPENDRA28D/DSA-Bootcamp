@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<conio.h>
 
 int main(){
     int a,b,c , n;
@@ -63,5 +64,6 @@ int main(){
     }
 printf("\n----------------------------------------\n");
     }
+    clrscr();
     return 0;
 }

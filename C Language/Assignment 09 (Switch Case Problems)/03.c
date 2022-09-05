@@ -24,11 +24,11 @@ int main(){
         break;  
 
     case 6:
-        printf("Today is Sunday");
+        printf("Today is Saturday");
         break;
 
     case 7:
-        printf("Today is Monday");
+        printf("Today is Sunday");
         break;                 
     default:
         printf("------INVALID DAY-------");
