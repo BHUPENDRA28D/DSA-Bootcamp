@@ -1,9 +1,10 @@
 #include<stdio.h>
-void duplicate(int a[],int size){
+void unique(int a[],int size){
     int i,j,count; 
     for(i=0;i<size;i++){
         count=0;
-        for(j=i+1;j<size;j++){
+        // for statement will start form 0 as it will also check numbers before a following numbers..
+        for(j=0;j<size;j++){
             if(i != j)
             if(a[i]==a[j])
                 count ++;
@@ -11,7 +12,7 @@ void duplicate(int a[],int size){
          if (count ==0)
               printf("%d ",a[i]);
                 
-        
+    
         
     }
     
@@ -28,6 +29,6 @@ int main(){
     printf("Value of index %d::",i);
     scanf("%d",&arr[i]);}
 
-    duplicate(arr,size);
+    unique(arr,size);
     return 0;
 }

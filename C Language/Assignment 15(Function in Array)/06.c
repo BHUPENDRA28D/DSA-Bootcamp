@@ -5,8 +5,22 @@ void reverse(int a[],int size){
     for(i=size-1;i>=0;i--){
         printf("%d ",a[i]);
     }
-
 }
+// Main program to reverse an array..with index number..s
+    // void reverse (int b[],int size){
+    //     int s=0, e=size-1,temp;
+    //     while(s<e)
+    //     {
+    //         temp= b[s];
+    //         b[s]= b[e];
+    //         b[e]= temp;
+    //         s++;
+    //         e--;
+    //     }
+    //     for(int i=0;i<size;i++){
+    //         cout<<" "<<b[i];
+    //     }
+    
 int main(){
     int size;
     printf("Enter no. of item in array::");
