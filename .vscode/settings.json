@@ -1,7 +1,7 @@
 {
     "files.associations": {
-        "09.C": "cpp",
+        "09.c": "c",
         "algorithm": "cpp",
-        "07.C": "cpp"
+        "07.C": "c"
     }
 }
