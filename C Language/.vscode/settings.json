@@ -1,5 +1,9 @@
 {
     "files.associations": {
-        "09.C": "cpp"
+        "09.C": "cpp",
+        "random": "cpp",
+        "stdio.h": "c",
+        "06.C": "cpp",
+        "tempCodeRunnerFile.C": "cpp"
     }
 }
