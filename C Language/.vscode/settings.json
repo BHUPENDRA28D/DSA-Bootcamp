@@ -4,6 +4,7 @@
         "random": "cpp",
         "stdio.h": "c",
         "06.C": "cpp",
-        "tempCodeRunnerFile.C": "cpp"
+        "tempCodeRunnerFile.C": "cpp",
+        "algorithm": "c"
     }
 }

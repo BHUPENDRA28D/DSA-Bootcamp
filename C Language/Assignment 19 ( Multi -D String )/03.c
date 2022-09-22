@@ -10,9 +10,20 @@ void display (int *p, int size){
         printf("%d ",*(p+i));
     }
 }
+void swap(int *p, int *q){
+    int t;
+    
+    t= *p;
+    *p= *q;
+    *q= t;
+    // *p = *p+q-(*q=*p);
+    printf("a = %d\nb = %d\n",*p,*q);
+}
 int main(){
     int arr[10];
-    input(arr,10);
-    display(arr,10);
+    // input(arr,10);
+    // display(arr,10);
+    int a=20 ,b=10;
+    swap(&a,&b);
     return 0;
 }

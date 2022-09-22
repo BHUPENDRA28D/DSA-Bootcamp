@@ -2,7 +2,7 @@
 int words(char *p){
     int i,count=1;
     for(i=0;p[i];i++){
-        if(p[i]== ' ' && p[i+1] != '\0'){
+        if(p[i]== ' ' && p[i+1] != ' '){
          count++;}
     }
     return count;
