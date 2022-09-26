@@ -30,15 +30,20 @@ void differ(struct time start,struct time stop){
         --start.min;
         start.sec+=60;
     }
-    diff.sec = stop.sec - start.sec;
+    diff.sec = start.sec - stop.sec;
 
     while(stop.min>start.min){
          --start.hr;
         start.min+=60;
     }
-    diff.min = stop.min - start.min;
-    diff.hr = stop.hr - start.hr;
-    printf("\n");printf("\n");
+    diff.min = start.min - stop.min;
+    diff.hr = start.hr - stop.hr;
+    printf("\n");
+
+    if(diff.hr < 0){
+        diff.hr = diff.hr*-1;
+    }
+        
 
     printf("\n%d :: %d :: %d",diff.hr,diff.min,diff.sec);
 
@@ -49,7 +54,7 @@ int main(){
     printf("Enter Start Time\n");
     printf("-------------------\n");
     s = input();
-    printf("Enter Start Time\n");
+    printf("Enter End Time\n");
     printf("-------------------\n");
     e = input();
 
