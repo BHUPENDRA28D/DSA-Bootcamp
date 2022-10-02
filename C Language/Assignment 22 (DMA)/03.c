@@ -13,5 +13,6 @@ int main(){
         sum = sum+p[i];
     }
     printf("\nSum = %d",sum);
+    free(p);
     return 0;
 }
