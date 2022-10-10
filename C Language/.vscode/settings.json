@@ -5,6 +5,10 @@
         "stdio.h": "c",
         "06.C": "cpp",
         "tempCodeRunnerFile.C": "cpp",
-        "algorithm": "c"
+        "algorithm": "c",
+        "array": "c",
+        "string_view": "c",
+        "initializer_list": "c",
+        "utility": "c"
     }
 }

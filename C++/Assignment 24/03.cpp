@@ -1,16 +1,23 @@
-#include<iostream>
+// Define a function to calculate x raised to the power y.
+#include <iostream>
 using namespace std;
-void fabonacii(int num){
-    int old=0, current=1 , next=0;
-
-    
+// Defing function
+int x_power_y(int *a, int *b)
+{
+  int result = 1;
+  while(*b--){
+    result=result*(*a);
+  }
+  return result;
 }
 
-int main(){
-int num;
-  cout<<"Enter a number::";
-    cin>>num;
+int main()
+{
+  int x, y;
+  cout << "Enter the value of x and y ::";
+  cin >> x >> y;
 
+  cout << "Value of x to the power y is = " << x_power_y(&x, &y);
 
-return 0;
+  return 0;
 }
