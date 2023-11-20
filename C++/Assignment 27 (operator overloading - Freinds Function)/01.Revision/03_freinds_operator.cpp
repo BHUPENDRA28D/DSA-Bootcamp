@@ -15,10 +15,10 @@ public:
         a = C.a;
         b = C.b;
     }
-    void setData(int x, int y)
+    void setData(int a, int b)
     {
-        a = x;
-        b = y;
+        this->a = a;
+        this->b = b;
     }
     void showData() { cout << "real: " << a << " imag: " << b << endl; }
     friend void sum(Complex, Complex);
