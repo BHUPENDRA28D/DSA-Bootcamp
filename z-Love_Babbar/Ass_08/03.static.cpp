@@ -5,7 +5,7 @@ class Account
 private:
     int account_num;
     float balance;
-    static double rate_of_intrest;
+    static double rate;
 
 public:
     Account() {}
@@ -19,15 +19,26 @@ public:
 
     float getBalance() { return balance; }
     static void setRateofIntrest();
-    float getRateIntrest() { return rate_of_intreset; }
+    static float getRateIntrest() { return rate; }
 };
-double Account::rate_of_intrest = 0.0;
+double Account::rate = 0.0;
 void Account ::setRateofIntrest()
 {
     cout << "\nEnter the rate of intrest:";
-    cin >> rate_of_intrest;
+    cin >> rate;
 };
 
 int main()
 {
+    Account a1(1452, 342257), a2(5452, 1252257);
+    cout << "\nAcc No. of :- " << a1.getAccoutNo();
+    cout << "\nBalance of :- " << a1.getBalance();
+    cout << "---------------------------------";
+    cout << "\nAcc No. of :- " << a1.getAccoutNo();
+    cout << "\nBalance of :- " << a2.getBalance();
+    cout << "---------------------------------";
+    cout << "---------------------------------";
+    Account::setRateofIntrest();
+    Account::getRateIntrest();
+    return 0;
 }
