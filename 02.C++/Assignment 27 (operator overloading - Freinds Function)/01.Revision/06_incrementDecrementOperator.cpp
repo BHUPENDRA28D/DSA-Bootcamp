@@ -39,7 +39,7 @@ public:
         return temp;
     }
     // operator++(); //Post increment operator.
-    Person operator++(int x)
+    Person operator++(int x) // int x is useless tells diff btw operator
     {
         Person temp;
         temp.age = age++;
@@ -50,7 +50,16 @@ public:
     int getRank() { return rank; }
 
     void display() { cout << "\nPriya age " << getAge() << " and rank is " << getRank() << endl; }
+
+    friend ostream &operator<<(ostream &os, Person P);
 };
+
+ostream &operator<<(ostream &os, Person P)
+{
+    cout << "\n friend Operator<< Called ";
+    cout << "\nPriya age " << P.age << " and rank is " << P.rank << endl;
+    return os;
+}
 
 int main()
 {
@@ -65,6 +74,10 @@ int main()
     (++p3).display(); // Pre increment
     (p3++).display(); // Post increment
     p3.display();
+    cout << "\n###############################";
+    //>>inserstion and exteraction operator.
 
+    // cout << p3; // here cout is a obj of ostream class which is calling operator<<() and passing Person p3 obj in it.
+    cout << p3 << p2;
     return 0;
 }
