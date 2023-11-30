@@ -56,8 +56,8 @@ public:
 
 ostream &operator<<(ostream &os, Person P)
 {
-    cout << "\n friend Operator<< Called ";
-    cout << "\nPriya age " << P.age << " and rank is " << P.rank << endl;
+    os << "\n friend Operator<< Called ";
+    os << "\nPriya age " << P.age << " and rank is " << P.rank << endl;
     return os;
 }
 
@@ -65,19 +65,20 @@ int main()
 {
     Person p1(20, 23), p2, p3;
     p2 = p1; // Copy value of p1 in p2.
-    p3 = p1 + p2;
+    // p3 = p1 + p2;
 
-    cout << "\nPr age " << p1.getAge() << " and rank is " << p1.getRank() << endl;
+    /*cout << "\nPr age " << p1.getAge() << " and rank is " << p1.getRank() << endl;
     cout << "Jatin age " << p2.getAge() << " and rank is " << p2.getRank() << endl;
     cout << "Priya age " << p3.getAge() << " and rank is " << p3.getRank() << endl;
     cout << "\n*****************************";
     (++p3).display(); // Pre increment
     (p3++).display(); // Post increment
-    p3.display();
+
+    p3.display();*/
     cout << "\n###############################";
     //>>inserstion and exteraction operator.
+    // cout << p3; // yanha[ void operator<<(ostream &os,Person P)]
 
-    // cout << p3; // here cout is a obj of ostream class which is calling operator<<() and passing Person p3 obj in it.
     cout << p3 << p2;
     return 0;
 }

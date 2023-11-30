@@ -1,7 +1,6 @@
 
 #include <iostream>
 using namespace std;
-
 class Complex
 {
 private:
@@ -37,6 +36,10 @@ public:
     };
     Complex operator*(Complex X)
     {
+        Complex temp;
+        temp.a = a * X.a;
+        temp.b = b * X.b;
+        return temp;
     }
 };
 
@@ -62,6 +65,10 @@ int main()
     // c5.showData();
     // c5 = -c1; // Here it is operator-(c1); in operator overloading  it is c1.operator-();
     // c5.showData();
+
+    Complex c5;
+    c5 = c1 * c2;
+    c5.showData();
 
     return 0;
 }
