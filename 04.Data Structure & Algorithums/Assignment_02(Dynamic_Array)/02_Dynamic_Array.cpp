@@ -20,7 +20,7 @@ public:
     int get(int);
     int count();
     int findElement(int);
-    int getCapacity()
+    int size()
     {
         return capacity;
     }
@@ -43,62 +43,65 @@ int DynArray::count()
 {
     return lastIndex + 1;
 }
+
 int DynArray::get(int index)
 {
-    if (index > 0 && index <= lastIndex)
-        return ptr[index];
+    if (index >= 0 && index <= lastIndex)
+        return *(ptr + index);
+    cout << endl
+         << "Invalid index or empty array";
+    return -1;
 }
 
 bool DynArray::isFull()
 {
-    if (lastIndex == capacity - 1)
-        return 1;
-    else
-        return 0;
+    return lastIndex == capacity - 1;
 }
 void DynArray::delet(int index)
 {
     int i;
-    if (isEmpty() || index < 0)
+    if (isEmpty() || index < 0 || index > lastIndex)
         cout << "\nArray is empty or Invalid Index" << endl;
     else
+    {
         for (int i = index; i < lastIndex; i++)
             ptr[i] = ptr[i + 1];
+        lastIndex--;
 
-    lastIndex--;
-
-    if (capacity / 2 == lastIndex + 1)
-        halfArray();
+        if (lastIndex + 1 >= capacity && capacity > 1)
+            halfArray();
+    }
 }
 
 void DynArray::edit(int index, int data)
 {
-    if (index < 0)
+    if (index >= 0 && index <= lastIndex)
         ptr[index] = data;
 }
 // insertion of data
 void DynArray::insert(int index, int data)
 {
     int i = lastIndex;
-    if (index < 0)
+    if (index < 0 || index > lastIndex + 1)
         cout << "\nInvalid Index" << endl;
+    else
+    {
+        if (isFull())
+            doubleArray();
 
-    else if (lastIndex == capacity - 1)
-        doubleArray();
+        for (i; i >= index; i--)
+            ptr[i + 1] = ptr[i];
 
-    for (i; i >= index; i--)
-        ptr[i + 1] = ptr[i];
-
-    ptr[index] = data;
-    lastIndex++;
+        ptr[index] = data;
+        lastIndex++;
+    }
 }
 // append in array
 void DynArray::append(int data)
 {
-    if (lastIndex == capacity)
-        doubleArray();
-
     lastIndex++;
+    if (isFull())
+        doubleArray();
 
     ptr[lastIndex] = data;
 }
@@ -141,13 +144,6 @@ DynArray::DynArray(int capacity)
 
 int main()
 {
-    DynArray arr(6);
-    arr.append(4);
-    arr.append(3);
-    arr.append(2);
-    arr.append(1);
-    arr.append(5);
 
-    cout << "\n data = " << arr.get(0);
     return 0;
 }
