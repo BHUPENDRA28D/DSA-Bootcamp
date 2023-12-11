@@ -36,20 +36,14 @@ The Object-Oriented Programming section covers key concepts in C++:
 
 The Data Structures and Algorithms section includes:
 
-- Linked Lists:
-        Explore the implementation and applications of linked lists.
--Stacks:
-       Learn how to use stacks for efficient LIFO (Last In First Out) operations.
--Queues:
-      Understand the concept of queues and implement them for FIFO (First In First Out) operations.
--Trees:
-      Dive into various tree structures like binary trees, binary search trees, and AVL trees.
--Sorting and Searching Algorithms:
-      Learn and implement efficient sorting (e.g., Bubble Sort, Merge Sort, Quick Sort) and searching (e.g., Linear Search, Binary Search) algorithms.
--Dynamic Programming:
-      Explore the powerful technique of dynamic programming to solve complex problems efficiently.
--Graph Algorithms:
-       Learn and implement algorithms for traversing graphs, finding shortest paths, and performing other graph operations.
+- Linked Lists
+- Stacks
+- Queues
+- Trees
+- Sorting and Searching Algorithms
+- Dynamic Programming
+- Graph Algorithms
+
 
 ## Standard Template Library (STL)
 
