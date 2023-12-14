@@ -30,7 +30,7 @@ void SLL::insertAtHead(Node &start, int data)
 {
     Node *temp = new Node(data);
     temp->item = data;
-    temp->next = start;
+    // temp->next = start;
 }
 // Main Function.
 int main()
