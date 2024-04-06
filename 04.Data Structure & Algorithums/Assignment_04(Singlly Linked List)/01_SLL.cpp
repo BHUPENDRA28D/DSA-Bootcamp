@@ -9,9 +9,9 @@ public:
     int item;
     Node *next;
     // Defualt Constructor
-    Node() { item = 0, next = NULL; }
+    // Node() { item = 0, next = NULL; }
 
-    Node(int item) { this->item = item, next = NULL; }
+    // Node(int item) { this->item = item, next = NULL; }
     // Node(int item) : item(this->item), next(nullptr) {}
 };
 class SLL
@@ -124,15 +124,19 @@ void SLL ::insertAfterNode(Node *ptr, int data)
 // display list.
 void SLL ::showList()
 {
-    Node *temp = start;
-    if (temp == NULL)
-        cout << "\n List is Empty : " << endl;
+    Node *temp;
+    temp = start;
 
+    if (temp == NULL)
+        cout << "List is empty " << endl;
     else
     {
-        cout << endl;
-        while (temp->next != NULL)
+
+        while (temp != NULL)
+        {
             cout << "  " << temp->item;
+            temp = temp->next;
+        }
     }
 }
 // insertAtLast.
@@ -146,10 +150,13 @@ void SLL::insertAtLast(int data)
     if (start == NULL)
         start = n;
     else
+    {
+        temp = start;
         while (temp->next != NULL)
             temp = temp->next;
 
-    temp->next = n;
+        temp->next = n;
+    }
 }
 
 void SLL::insertAtStart(int data)
@@ -163,11 +170,11 @@ void SLL::insertAtStart(int data)
 // Main Function.
 int main()
 {
-    Node *node1 = new Node(23);
-    Node *node2;
+    // Node *node1 = new Node();
+    // Node *node2;
 
-    cout << "Created a node with value: " << node1->item << endl;
-    cout << "Created node address values: " << node1->next << endl;
+    // cout << "Created a node with value: " << node1->item << endl;
+    // cout << "Created node address values: " << node1->next << endl;
 
     SLL s1;
 
