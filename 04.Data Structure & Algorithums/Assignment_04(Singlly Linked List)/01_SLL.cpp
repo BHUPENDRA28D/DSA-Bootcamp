@@ -23,6 +23,7 @@ private:
 public:
     SLL() { start = NULL; }
     void showList();
+
     Node *search(int);
     void insertAfterNode(Node *, int);
     void insertAtStart(int);
