@@ -108,23 +108,18 @@ Array::Array(int cap)
     lastIndex = -1;
     ptr = new int[capacity];
 }
-int main()
-{
-    Array obj(5);
-    if (obj.isEmpty())
-        cout << "Empty Array\n";
-    obj.append(20);
-    obj.append(40);
-    obj.append(60);
-    // obj.insert(1,30);
+// int main()
+// {
+//     Array obj(5);
+//     if (obj.isEmpty())
+//         cout << "Empty Array\n";
+//     obj.append(20);
+//     obj.append(40);
+//     obj.append(60);
+//     // obj.insert(1,30);
 
-    for (int i = 0; i < obj.count(); i++)
-        cout << obj.get(i) << " ";
-    // obj.del(2);
-    // cout<<endl;
-    // for(int i=0;i<obj.count();i++)
-    //     cout<<obj.get(i)<<" ";
+//     for (int i = 0; i < obj.count(); i++)
+//         cout << obj.get(i) << " ";
 
-    // cout<<endl;
-    return 0;
-}
+//     return 0;
+// }
